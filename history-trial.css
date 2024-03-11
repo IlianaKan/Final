@@ -1,0 +1,578 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* BURGER MENU */
+
+.hamburger-menu{
+    display: none;
+    
+}
+
+
+#menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+  }
+  .menu__btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 350px;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+  }
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+  }
+
+
+
+/* MENU */
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    background-color:
+        /*rgb(192, 222, 232)*/
+        transparent;
+    background-image:
+        /*url(home-photos/background-home1.jpeg)*/
+       /*url(home-photos/back-main-home.jpeg);*/ url(background2.webp);
+    background-size: cover;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    gap: 330px;
+    padding-left: 90px;
+    font-size: 15px;
+}
+
+#menu ul li{
+    float: left;
+    padding-left: 10px;
+    list-style: none;
+    text-decoration: none;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+#menu .call{
+    padding-top: 10px;
+}
+
+#menu ul li a:hover{
+    color: lightcoral;
+}
+
+span {
+    color: lightcoral;
+}
+
+
+/*MAIN*/
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: /*url(home-photos/back-main-home.jpeg);*/ url(background2.webp);
+    background-size: cover;
+}
+
+h1{
+    display: flex;
+    padding-left: 600px;
+    padding-top: 180px;
+    padding-bottom: 80px;
+    font-size: 40px;
+    color: #333;
+}
+
+/* MAIN 1 */
+
+.container1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 100px;
+    gap: 40px;
+}
+
+.photo1{
+    width: 5000px;
+    height: 300px;
+    /*border: 2px solid black;*/
+    border-radius: 5px;
+    background-image: url(history-photos/history-wars.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+#culture p{
+    width: 700px;
+}
+#cuisine{
+    width: 7000px;
+
+}
+.container span{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.container ul li{
+    text-decoration:none ;
+}
+
+.photo2{
+    width: 5000px;
+    height: 300px;
+    /*border: 2px solid black;*/
+    border-radius: 5px;
+    background-image: url(history-photos/history-dance.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.photo3{
+    width: 5000px;
+    height: 400px;
+    /*border: 2px solid black;*/
+    border-radius: 5px;
+    background-image: url(history-photos/history-culture.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.photo4{
+    width: 5000px;
+    height: 300px;
+    /*border: 2px solid black;*/
+    border-radius: 5px;
+    background-image: url(history-photos/history-cuisine.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.photo5{
+    width: 5000px;
+    height: 400px;
+    /*border: 2px solid black;*/
+    border-radius: 5px;
+    background-image: url(history-photos/history-events.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+/* MAIN 2 */
+
+.main2 h1 {
+    padding-top: 160px;
+    padding-bottom: 0;
+}
+
+.design-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 100px 0;
+    font-family: Jost;
+  }
+  
+  .design {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .timeline {
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .timeline-content {
+    padding: 20px;
+    background: /*#1f1f1f*/ rgb(228, 205, 205);
+    /*-webkit-box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+            box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;*/
+    border-radius: 5px;
+    box-shadow: 0 0 8px gray;
+    color: /*white*/ #333;
+    padding: 1.75rem;
+    transition: 0.4s ease;
+    overflow-wrap: break-word !important;
+    margin: 1rem;
+    margin-bottom: 20px;
+    border-radius: 6px;
+  }
+  
+  .timeline-component {
+    margin: 0px 20px 20px 20px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .timeline {
+      display: grid;
+      grid-template-columns: 1fr 3px 1fr;
+    }
+    .timeline-middle {
+      position: relative;
+      background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+      width: 3px;
+      height: 100%;
+    }
+    .main-middle {
+      opacity: 0;
+    }
+    .timeline-circle {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+    }
+  }
+
+/* FOOTER */
+
+footer{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: row;
+    height: 330px;
+    padding-top: 130px;
+    /*border-radius: 10px;*/
+    /*border: 2px solid black;*/
+   /* margin: 20px;*/
+    /*gap: 150px;*/
+    justify-content: space-around;
+    padding: 20px;
+    box-shadow: 0 0 10px;
+    background-color: rgb(233, 212, 209);
+    margin-top: 200px;
+}
+
+.footer_container{
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+    padding-top: 90px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+footer h5{
+    padding: 20px;
+    padding-top: 150px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer ul li{
+    list-style: none;
+    padding-top: 10px;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+footer ul li a:hover{
+    cursor: pointer;
+    color: lightcoral;
+}
+
+.foot3 li{
+    float: left;
+    margin-left: 10px;
+}
+
+.foot1 h5{
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+.foot2 h5{
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+.foot3 h5{
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+.foot4 h5{
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+.foot3 ul li a{
+    font-size: 20px;
+    gap: 20px;
+}
+
+
+/* RESPONSIVE ipad pro */
+
+@media only screen and (max-width: 1024px){
+
+  #menu{
+      display: none;
+  }
+  .hamburger-menu{
+      display: block;
+      top: 0;
+      position: absolute;
+  }
+
+  h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+ }
+
+ .photo3{
+  width: 600px;
+  height: 370px;
+ }
+
+ #culture p{
+  width: 450px;
+ }
+ #culture ul li{
+  width: 450px;
+ }
+ #cuisine.words1{
+  width: 450px;
+ }
+ .photo4{
+  width: 300px;
+ }
+
+ footer{
+  margin-top: 0;
+  margin: 0;
+ }
+
+ .footer_container{
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+
+}
+
+
+
+
+
+/* RESPONSIVE phone*/
+
+@media only screen and (max-width: 412px){
+
+  body{
+     max-width: 412px;
+  }
+
+  #menu{
+      display: none;
+  }
+  .hamburger-menu{
+      display: block;
+      top: 0;
+      position: absolute;
+  }
+  
+  h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    padding-top: 100px;
+
+  }
+
+  .main2{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container1{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container1 p{
+    width: 330px;
+  }
+
+  #cuisine p{
+    width: 330px;
+  }
+
+  #culture p{
+    width: 330px;
+    display: block;
+  }
+
+  #container1{
+    display: flex;
+    flex-direction: column-reverse;
+    
+  }
+
+  #cuisine.words1{
+    padding: 0 20px;
+    width: 380px;
+  }
+  #culture.words1{
+    padding: 0 20px;
+    width: 380px;
+  }
+  #culture ul li{
+    padding: 0 20px;
+    width: 380px;
+  }
+
+
+  .photo1{
+    width: 370px;
+    height: 500px;
+  }
+  .photo2{
+    width: 370px;
+    height: 500px;
+  }
+  .photo3{
+    width: 370px;
+    height: 500px;
+  }
+  .photo4{
+    width: 370px;
+    height: 500px;
+  }
+  .photo5{
+    width: 370px;
+    height: 500px;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    width: 412px;
+    margin-top: 0;
+}
+
+.main2 h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 400px;
+}
+
+footer h5{
+    font-weight: bold;
+}
+
+.footer_container{
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+    padding-right: 30px;
+    gap: 80px;
+    padding-top: 0;
+}
+
+
+}

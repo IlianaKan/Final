@@ -1,0 +1,753 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* BURGER MENU */
+
+.hamburger-menu{
+    display: none;
+    
+}
+
+
+#menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+  }
+  .menu__btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 350px;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+  }
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+  }
+
+
+
+/* MENU */
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    background-color:
+        /*rgb(192, 222, 232)*/
+        transparent;
+    background-image:
+        /*url(home-photos/background-home1.jpeg)*/
+       url(background2.webp);
+    background-size: cover;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    gap: 330px;
+    padding-left: 90px;
+    font-size: 15px;
+}
+
+#menu ul li{
+    float: left;
+    padding-left: 10px;
+    list-style: none;
+    text-decoration: none;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+#menu .call{
+    padding-top: 10px;
+}
+
+#menu ul li a:hover{
+    color: lightcoral;
+}
+
+span {
+    color: lightcoral;
+}
+
+/*MAIN*/
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(background2.webp);
+    background-size: cover;
+    padding: 100px 0 0 0 ;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 140px;
+    font-size: 40px;
+    color: #333;
+}
+
+/* FORM */
+
+.main1 {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+
+.form_container {
+    display: flex;
+    flex-direction: column;
+    width: 470px;
+    height: 740px;
+    /*border: 2px solid black;*/
+    border-radius: 5px;
+    margin: 10px 50px 0 100px;
+    color: #333;
+    padding: 20px;
+    padding-left: 30px;
+    box-shadow: 0 0 2px;
+    background-color: white;
+}
+
+.main1_1 h2 {
+    padding-top: 80px;
+    padding-left: 105px;
+    color: #333;
+    font-style: italic;
+}
+
+span {
+    color: lightcoral;
+}
+
+.column {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding-top: 30px;
+}
+
+.solo{
+    padding-top: 30px ;
+}
+
+.solo input{
+    width: 420px;
+}
+
+input {
+    width: 195px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    /*box-shadow: 0 0 5px black;*/
+    border: none;
+    border: 0.5px solid #333;
+    margin-top: 5px;
+    outline: none;
+}
+
+.t_c {
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+}
+
+.t_c input {
+    width: 15px;
+    height: 15px;
+    margin-right: 15px;
+}
+
+.t_c label {
+    padding-top: 3px;
+}
+
+.t_c a {
+    text-decoration: none;
+    color: lightcoral;
+}
+
+.mess {
+    padding-top: 30px;
+}
+
+.mess input {
+    width: 420px;
+    height: 100px;
+}
+
+button {
+    width: 420px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: rgb(226, 140, 140);
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* MAIN 1_2 */
+
+.main1_2 h2 {
+    padding-top: 80px;
+    padding-left: 150px;
+    color: #333;
+    font-style: italic;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    margin-left: 90px;
+}
+
+.c_info{
+    /*border: 2px solid black;*/
+    border-radius: 5px;
+    box-shadow: 0 0 2px;
+    width: 230px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    /*margin-top: 40px;*/
+    margin-left: 60px;
+    background-color: rgb(230, 216, 216);
+}
+
+ul li{
+    list-style: none;
+    padding-top: 5px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #333;
+}
+
+ul li a:hover{
+    cursor: pointer;
+    color: lightcoral;
+}
+
+.social{
+    /*margin-top: 40px;*/
+    height: 220px;
+    width: 520px;
+    box-shadow: 0 0 3px;
+    border-radius: 10px;
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    padding-left: 20px;
+    background-color: rgb(230, 216, 216);
+}
+
+.svg{
+    height: 20px;
+    width: 20px;
+    margin-top: 8px;
+}
+
+#spotify{
+    animation: spotify-animation 5s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+    margin-top: 10px;
+}
+
+@keyframes spotify-animation {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+
+
+/* MAIN 2 */
+
+.main2{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    padding: 100px 0 80px 100px;
+}
+
+.main2 h2 {
+    padding-top: 80px;
+    padding-left: 105px;
+    color: #333;
+    font-style: italic;
+}
+
+.main2 h3 {
+    padding:40px 105px 10px 105px;
+    color: #333;
+    font-style: italic;
+}
+
+.methods ul li{
+    list-style: none;
+    padding: 5px 105px;
+}
+
+.note{
+    padding-top: 130px;
+    padding-left: 85px;
+    width: 550px;
+}
+
+.note ul li{
+    list-style: circle;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.note #note_l ul li {
+    list-style: inside;
+    padding-left: 30px;
+}
+
+
+
+
+
+/* FOOTER */
+
+footer{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: row;
+    height: 330px;
+    padding-top: 130px;
+    margin-top: 150px;
+    /*border-radius: 10px;*/
+    /*border: 2px solid black;*/
+   /* margin: 20px;*/
+    /*gap: 150px;*/
+    justify-content: space-around;
+    padding: 20px;
+    box-shadow: 0 0 5px;
+    background-color: rgb(233, 212, 209);
+}
+
+.footer_container{
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+    padding-top: 90px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+footer h5{
+    padding: 20px;
+    padding-top: 150px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer ul li{
+    list-style: none;
+    padding-top: 10px;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+footer ul li a:hover{
+    cursor: pointer;
+    color: lightcoral;
+}
+
+.foot3 li{
+    float: left;
+    margin-left: 10px;
+}
+
+.foot1 h5{
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+.foot2 h5{
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+.foot3 h5{
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+.foot4 h5{
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+.foot3 ul li a{
+    font-size: 20px;
+    gap: 20px;
+}
+
+
+/* RESPONSIVE ipad pro */
+
+@media only screen and (max-width: 1024px){
+
+    #menu{
+        display: none;
+    }
+    .hamburger-menu{
+        display: block;
+        top: 0;
+        position: absolute;
+    }
+
+    .main1{
+       max-height: 1366px;
+    }
+
+    h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        padding-top: 150px;
+     }
+
+     .main1{
+        display: flex;
+        flex-direction: column;
+     }
+
+     .main1_2{
+        margin-left: 40px;
+     }
+     .main1_2 h2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0px;
+        padding-right: 0;
+        width: 940px;
+        padding-bottom: 40px;
+     }
+
+     .c_info{
+        width: 300px;
+        height: 300px;
+        display: flex;
+       
+        justify-content: center;
+     }
+     .social{
+        width: 660px;
+        height: 300px;
+        align-items: center;
+     }
+
+     .main1_1{
+        margin-left: 90px;
+     }
+
+     .main1_1 h2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+        margin-left: 0;
+        width: 860px;
+     }
+
+     .form_container{
+        width: 650px;
+     }
+
+     .info input{
+        width: 280px;
+     }
+     .solo input{
+        width: 590px;
+     }
+     .mess input{
+        width: 590px;
+     }
+
+     .t_c input{
+        width: 15px;
+        height: 15px;
+        margin-right: 15px;
+     }
+
+     button{
+        width: 450px;
+        margin-top: 30px;
+        margin-left: 70px;
+     }
+
+     .main2{
+        margin-top: 800px;
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        padding-left: 15px;
+     }
+     .note{
+        padding-left: 0;
+        width: 300px;
+     }
+
+     .footer_container{
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+     }
+}
+
+
+/* RESPONSIVE iphone */
+
+@media only screen and (max-width: 412px){
+
+    body{
+       max-width: 412px;
+       overflow-x: none;
+    }
+
+    #menu{
+        display: none;
+    }
+    .hamburger-menu{
+        display: block;
+        top: 0;
+        position: absolute;
+    }
+
+    .main1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1{
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+
+    .main1_2 h2{
+        padding: 50px 0;
+        width: 390px;
+    }
+    .main1_1 h2{
+        padding: 30px 80px;
+        width: 370px;
+        
+        
+    }
+    .main1_2{
+        margin: 0;
+    }
+    .container{
+        gap: 10px;
+        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .c_info{
+        margin-left: 20px;
+    }
+
+    .social{
+        width: 300px;
+        margin-left: 20px;
+    }
+
+    .form_container{
+        margin-left: 20px;
+        width: 375px;
+        height: 880px;
+        margin-top: 30px;
+    }
+
+
+    .column{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form_container{
+        margin: 0;
+    }
+    .main1_1{
+        margin: 50px 20px;
+    }
+
+    .info input{
+        width: 320px;
+    }
+
+    input{
+        width: 340px;
+    }
+
+    .solo input{
+        width: 320px;
+    }
+    .mess input{
+        width: 320px;
+    }
+    .t_c input{
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    button{
+        margin-top: 30px;
+        width: 320px;
+        margin-left: 0;
+    }
+
+    .main2{
+        margin-top: 1400px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding-left: 15px;
+     }
+    .methods{
+        width: 400px;
+    }
+
+    .note{
+        width: 300px;
+        padding-top: 20px;
+        padding-left: 120px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        height: 1000px;
+        width: 412px;
+    }
+
+    footer h5{
+        font-weight: bold;
+    }
+
+    .footer_container{
+        display: flex;
+        flex-direction: column;
+        padding-left: 100px;
+        padding-right: 30px;
+        gap: 80px;
+        padding-top: 0;
+    }
+
+
+}
+
+
+
+
